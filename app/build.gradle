@@ -6,6 +6,10 @@ plugins {
 android {
     compileSdk 32
 
+    buildFeatures {
+        dataBinding true
+    }
+
     defaultConfig {
         applicationId "de.syntax_institut.filmestreamingservice"
         minSdk 21

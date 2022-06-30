@@ -22,6 +22,7 @@ class ItemAdapter(
      */
     inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         // TODO Schreibe hier deinen Code
+        var textView22 = itemView.findViewById<TextView>(R.id.textView1)
     }
 
     /**
@@ -31,9 +32,11 @@ class ItemAdapter(
 
         // das itemLayout wird zur ItemView aufgeblasen
         // TODO Schreibe hier deinen Code
+        val itemView = LayoutInflater.from(parent.context)
+            .inflate(R.layout.list_item, parent, false)
 
         // und in einem ViewHolder zurückgegeben
-        return TODO("Liefere das Ergebnis zurück")
+        return ItemViewHolder(itemView)
     }
 
     /**
@@ -43,12 +46,16 @@ class ItemAdapter(
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         // Hole das movieTitle Objekt für die enthaltenen Informationen
         // TODO Schreibe hier deinen Code
+        val item = dataset[position]
+
 
         // Hole die TextView aus dem ViewHolder
         // TODO Schreibe hier deinen Code
+        val holder = holder.textView22.text = context.resources.getString(item.stringResource)
 
         // Setze den Text
         // TODO Schreibe hier deinen Code
+
     }
 
     /**
