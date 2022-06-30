@@ -28,9 +28,11 @@ class MainActivity : AppCompatActivity() {
 
         // Liste aus Filmtiteln wird von der Datasource geladen
         // TODO Schreibe hier deinen Code
+        val Filmtitel = Datasource(this).loadTitles()
 
         // ItemAdapter wird als Adapter festgelegt
         // TODO Schreibe hier deinen Code
+        recyclerView.adapter = ItemAdapter(this, Filmtitel)
 
         // verbesserte Performance bei fixer Größe
         recyclerView.setHasFixedSize(true)

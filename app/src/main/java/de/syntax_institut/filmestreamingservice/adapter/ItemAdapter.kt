@@ -51,7 +51,7 @@ class ItemAdapter(
 
         // Hole die TextView aus dem ViewHolder
         // TODO Schreibe hier deinen Code
-        val holder = holder.textView22.text = context.resources.getString(item.stringResource)
+         holder.textView22.text = context.resources.getString(item.stringResource)
 
         // Setze den Text
         // TODO Schreibe hier deinen Code
@@ -62,6 +62,6 @@ class ItemAdapter(
      * damit der LayoutManager weiß, wie lang die Liste ist
      */
     override fun getItemCount(): Int {
-        return TODO()
+        return dataset.size
     }
 }
